@@ -1,0 +1,4 @@
+[DEFAULT]
+duration = 3.0
+FPS = 1080
+GUI = 0
