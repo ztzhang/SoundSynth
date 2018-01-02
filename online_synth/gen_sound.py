@@ -27,7 +27,6 @@ class Obj:
         self.bulletSetupId = 0
         self.mass = 1
         self.active = 1
-        # self.Load()
 
     def ReadPose(self, poseId):
         self.poseId = poseId
@@ -72,10 +71,6 @@ class Obj:
 
     def ReadObj(self, objId):
         self.objId = objId
-        # if objId == 3:
-        #    self.mass = 75
-        # if objId == 4:
-        #    self.mass = 300
         if self.active == 1:
             self.objPath = os.path.join(
                 self.ROOT, 'data/ready', '%d' % self.objId, '%d.orig_nt.obj' % self.objId)
@@ -85,7 +80,7 @@ class Obj:
         if self.active == 1:
             volumefile = open(os.path.join(
                 self.ROOT, 'data/final100/%d/models/volume.txt' % self.objId))
-            self.mass = float(volumefile.readline()) * self.density
+            self.mass = float(volumefile.readline()) * self.density / 50
 
     def Load(self):
         self.ReadPose(self.poseId)
@@ -201,9 +196,8 @@ def CreateDir(path):
 if __name__ == '__main__':
     ROOT = ROOT_DIR
 
-    #argv = ['s',0,0,0,0,0,1,0]
     args = sys.argv[1:]
-    optlist, args = getopt.getopt(args, 'bsrcp:v')
+    optlist, args = getopt.getopt(args, 'bsrcop:v')
     argv = [sys.argv[0]] + args
     skip_bullet = False
     skip_sound = False
@@ -364,17 +358,17 @@ if __name__ == '__main__':
                 print('sh %s' % os.path.join(ROOT, 'script', 'prepare_ini.sh') + ' -i %d ' % obj_id
                       + objs[obj_id].WriteShellCmd())
 
-                if os.path.exists('./../obj-%04d.wav' % (objs[obj_id].objId)):
+                if os.path.exists('../%04d.wav' % (objs[obj_id].objId)):
                     print('WAV FOUND!')
-                if os.path.exists('./../obj-%04d.raw' % (objs[obj_id].objId)):
+                if os.path.exists('../%04d.raw' % (objs[obj_id].objId)):
                     print('RAW FOUND!')
 
                 if is_overwrite:
                     print("OVERWRITE!!!")
                     subprocess.call('rm *.wav', shell=True)
                     subprocess.call('rm *.raw', shell=True)
-                    if os.path.exists('./../obj-%04d.wav' % (objs[obj_id].objId)):
-                        subprocess.call('rm ./../obj-%04d.wav' %
+                    if os.path.exists('../%04d.wav' % (objs[obj_id].objId)):
+                        subprocess.call('rm ../%04d.wav' %
                                         (objs[obj_id].objId), shell=True)
 
                 if not os.path.exists('./../%04d.wav' % (obj_id)) or not os.path.exists('./../%04d.raw' % (obj_id)):

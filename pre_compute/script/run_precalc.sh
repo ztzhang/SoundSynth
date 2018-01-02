@@ -1,15 +1,18 @@
-SOURCECODE=/data/vision/billf/object-properties/sound
-SOURCEPATH=/data/vision/billf/object-properties/sound/sound/script
-LIBPATH=/data/vision/billf/object-properties/sound/software/fmmlib3d-1.2/matlab
+ROOT=ABSPATH_TO_PROJECT_FOLDER
+MATLAB=YOUR_MATLAB_PATH
 
-HOSTNAME=hostname
-python /data/vision/billf/object-properties/sound/sound/script/Pre_Calc_EV.py $1 $2 0 $HOSTNAME
+
+SOURCEPATH=${ROOT}/pre_compute/scripts
+LIBPATH=/data/vision/billf/object-properties/sound/software/fmmlib3d-1.2/matlab
+DATASET_NAME=final100
+
+python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 0
 echo finished calling
 #echo $2
 cd $SOURCEPATH
-MATLAB=/afs/csail.mit.edu/common/matlab/2015a/bin/matlab
-CURPATH=/data/vision/billf/object-properties/sound/sound/data/final100/$1/models/mat-$2
-$MATLAB -nodisplay -nodesktop -nosplash -r "addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
+CURPATH=${ROOT}/data/${DATASET_NAME}/$1/models/mat-$2
+FILEGENERATORS=${ROOT}/file_generators
+$MATLAB -nodisplay -nodesktop -nosplash -r "addpath('${FILEGENERATORS}');addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
 
 cd $CURPATH
 mkdir -p moments
@@ -18,6 +21,6 @@ if [ -f "moments.pbuf" ]
 then
     echo "FOUND!!!"
 else
-    GENMOMENTS=${SOURCECODE}/sound/code/ModalSound/build/bin/gen_moments
+    GENMOMENTS=${ROOT}/modal_sound/build/bin/gen_moments
     ${GENMOMENTS} ../fastbem/input-%d.dat ../bem_result/output-%d.dat 0 59
 fi

@@ -170,10 +170,6 @@ inline bool exists_test (const std::string& name) {
 AudioProducer::AudioProducer(const QSettings& settings, const QDir& dataDir):
         device_(NULL), normalizeScale_(-1.)
 {
-	short_component = settings.value("modal/short_component").toDouble();
-	short_period = settings.value("modal/short_period").toDouble();
-	long_period = settings.value("modal/long_period").toDouble();
-
     ////// load data
     QString filename;
     // --- load vertex map ---
@@ -455,10 +451,6 @@ void AudioProducer::single_channel_synthesis(const Tuple3ui& tri, const Vector3d
     float current_sum=0;
     float current_energy=0;
 
-	std::cout << "short_component: " << short_component << std::endl;
-	std::cout << "short_period: " << short_period << std::endl;
-	std::cout << "long_period: " << long_period << std::endl;
-
     for(int j = 0;j < modal_->num_modes();++ j)
     {
 
@@ -480,8 +472,7 @@ void AudioProducer::single_channel_synthesis(const Tuple3ui& tri, const Vector3d
             for(int ti = 0;ti < totTicks;++ ti)
             {
                 const double ts = static_cast<double>(ti) / static_cast<double>(SR);    // time
-                // const double amp = exp(- c[i]*0.5*ts ) ;    // exp(-xi * omega * t)
-                const double amp = short_component * exp(- c[i] * 0.5 * ts / short_period) + (1.0 - short_component) * exp(- c[i] * 0.5 * ts / long_period);
+                const double amp = exp(- c[i]*0.5*ts ) ;    // exp(-xi * omega * t)
                 if ( amp < 1E-3 ) break;
                 soundBuffer_[index_t][ti] += amp * SS * sin( omegaD[i]*ts ) * amplitude;  // sin(omega_d * t)
             }
