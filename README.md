@@ -34,7 +34,7 @@ This repository contains sound synthesis code used by our papers:
  
  The code is structured as two seperate parts: **offline pre-compuation** and **online synthesis**.
  
- The difiniton of scenes and materials are located in **config** folder.
+ The definiton of scenes and materials are located in **config** folder.
  
   ### Offline pre-computation:
   
