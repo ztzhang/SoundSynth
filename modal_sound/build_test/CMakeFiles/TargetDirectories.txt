@@ -1,0 +1,16 @@
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/tools/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/tools/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/tools/CMakeFiles/extmat.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/libpython/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/libpython/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/libpython/CMakeFiles/sploosh.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/demo/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/demo/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/demo/CMakeFiles/click_synth.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/protobuf/CMakeFiles/rebuild_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/protobuf/CMakeFiles/edit_cache.dir
+/data/vision/billf/object-properties/sound/ztzhang/SoundSynth/modal_sound/build_test/src/protobuf/CMakeFiles/gen_moments.dir

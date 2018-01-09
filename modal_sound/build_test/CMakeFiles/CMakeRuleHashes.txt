@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+cecb9fadc5a8552e5aa78d4c1442cb7b bin/python/sploosh_pb2.py
+069fb2ffa2bd121b67a83d38d2a3b589 src/demo/sploosh.pb.cc
+c1aaa7bd98aeb92dba13af830d47f992 src/protobuf/sploosh.pb.cc
