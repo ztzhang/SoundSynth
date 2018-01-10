@@ -1,9 +1,9 @@
 #!/bin/bash
 #MKL_PATH
-export Mkl_lib=/data/vision/billf/object-properties/sound/software/mkl/mkl/lib/intel64/
+#export Mkl_lib=/data/vision/billf/object-properties/sound/software/mkl/mkl/lib/intel64/
 
 #Iomp5 path
-export Iomp5_path=/data/vision/billf/object-properties/sound/software/lib
+#export Iomp5_path=/data/vision/billf/object-properties/sound/software/lib
 
 
 

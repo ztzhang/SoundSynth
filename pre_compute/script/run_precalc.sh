@@ -1,18 +1,14 @@
 ROOT=ABSPATH_TO_PROJECT_FOLDER
-MATLAB=YOUR_MATLAB_PATH
-
+LIBPATH=$ROOT/pre_compute/external/fmmlib3d-1.2/matlab
 
 SOURCEPATH=${ROOT}/pre_compute/scripts
-LIBPATH=/data/vision/billf/object-properties/sound/software/fmmlib3d-1.2/matlab
 DATASET_NAME=final100
 
 python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 0
-echo finished calling
-#echo $2
 cd $SOURCEPATH
 CURPATH=${ROOT}/data/${DATASET_NAME}/$1/models/mat-$2
 FILEGENERATORS=${ROOT}/file_generators
-$MATLAB -nodisplay -nodesktop -nosplash -r "addpath('${FILEGENERATORS}');addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
+matlab -nodisplay -nodesktop -nosplash -r "addpath('${FILEGENERATORS}');addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
 
 cd $CURPATH
 mkdir -p moments

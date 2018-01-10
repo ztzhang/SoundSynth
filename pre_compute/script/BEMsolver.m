@@ -2,9 +2,7 @@
 function BEMsolver(cur_dir,overwrite)
 root = cur_dir;
 prefix=[];
-addpath('/data/vision/billf/object-properties/sound/software/nihu/src/bin/matlab');
-addpath('/data/vision/billf/object-properties/sound/software/nihu/src/bin/tutorial');
-run install.m
+
 %%
 mesh=[];
 load([root,'/bem_input/mesh.mat']);
