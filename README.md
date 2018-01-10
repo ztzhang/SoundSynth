@@ -30,7 +30,9 @@ This repository contains sound synthesis code used by our papers:
  
  - MATLAB for pre-computation
  
- We provide auto install scripts for all the required libraies excluding Matlab & MKL.
+ We provide auto install scripts for all the required libraies excluding Matlab & MKL. You need to modify the first lines in `auto_install.sh` to indicate the path to the MKL libraries, libiomp5(often included in an MKL install), and the Matlab installation folder.
+ 
+ Then, simply run `./auto_install.sh`. This should install all the necesaary components for you. After this, you 
  
  # Usage:
  
