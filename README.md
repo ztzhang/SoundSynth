@@ -34,6 +34,8 @@ This repository contains sound synthesis code used by our papers:
  
  Then, simply run `./auto_install.sh`. This should install all the necesaary components for you. After this, you should be able to use the synthesis pipleine. 
  
+ Refer to the follwoing sections for customized installation and usage. 
+ 
  # Usage:
  
  The code is structured as two seperate parts: **offline pre-compuation** and **online synthesis**.
