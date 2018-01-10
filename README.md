@@ -30,6 +30,8 @@ This repository contains sound synthesis code used by our papers:
  
  - MATLAB for pre-computation
  
+ We provide auto install scripts for all the required libraies excluding Matlab & MKL.
+ 
  # Usage:
  
  The code is structured as two seperate parts: **offline pre-compuation** and **online synthesis**.
@@ -42,11 +44,9 @@ This repository contains sound synthesis code used by our papers:
   
   #### Building **Modal Sound**
   
-  1. modify **modal_sound/run_cmake.sh** to provide directories to required libraries and include files.
+  One can run `modelsound/auto_install.sh` to install all required libraries and build the necessary binaries.
   
-  2. run `./run_cmake.sh`
-  
-  3. enter **modal_sound/build** and run `make`
+  If you wish to mannully install the libraries or customize their locations, please see [this document](https://github.com/ztzhang/SoundSynth/blob/master/documents/building_modalsound.md) for a detailed description. 
   
   #### Building file generators
   
@@ -61,6 +61,8 @@ This repository contains sound synthesis code used by our papers:
   1. For the direct BEM method, one needs to install the [Nihu matlab library](http://last.hit.bme.hu/nihu/index.html) and specify its path in **pre_compute/run_precalc_bem.sh**
   
   2. For the FMM BEM method, one needs to install the [FMMlib3d libraries](https://cims.nyu.edu/cmcl/fmm3dlib/fmm3dlib.html) and specify its path in **pre_compute/run_precalc.sh**
+  
+  A auto install script is provided in `pre_compute/extertal/auto_install.sh`. Note that you need to specify your matlab installation path in the first line of `auto_install.sh`. 
   
   
   #### Running pre-conmputation:
