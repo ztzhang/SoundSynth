@@ -29,6 +29,7 @@ cd ..
 sudo apt-get install libboost-all-dev
 
 #install protobuf
+mkdir -p external
 cd external
 if [ ! -d "./protobuf-master/build" ]; then
     echo 'installing protobuf from current build'
