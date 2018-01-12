@@ -32,8 +32,35 @@ The definition of scenes and materials are located in `config` folder.
  
 ### Offline pre-computation
   
-The input to pre-computation is a tetrahedron mesh, one can conver an ordinary mesh into it using [TetGen](http://wias-berlin.de/software/tetgen/) or [IsoStuffer](https://github.com/cxzheng/ModalSound) described by [Labelle and Shewchuk 2007](http://www.cs.berkeley.edu/~jrs/papers/stuffing.pdf).
+The input to pre-computation is a tetrahedron mesh. One can convert an ordinary triangular mesh using [TetGen](http://wias-berlin.de/software/tetgen/) or [IsoStuffer](https://github.com/cxzheng/ModalSound) described by [Labelle and Shewchuk 2007](http://www.cs.berkeley.edu/~jrs/papers/stuffing.pdf).
   
+#### Running pre-computation
+  
+Our pre-computation step utilizes two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, direct method is faster when your mesh has small number of faces, as FMM solver is faster and more memory efficient when the mesh has more faces. We suggest using direct solver when the mesh has less than 1000 faces. 
+
+One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`.Note that you need to pass an object id followed by a material id to the script. The folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`, all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
+
+`./run_precalc.sh 0 1`
+
+will pre-compute object 0 with material 1 defined in `config/material/material-1.cfg` using FMM solver. 
+
+### Online synthesis
+ 
+The online synthesis part use [bullet](https://github.com/bulletphysics/bullet3) for the physical simulation and a modified version of [Modal Sound Synthesis](https://github.com/cxzheng/ModalSound) for the sound synthesis.
+
+  
+#### Running online simulation
+  
+The entry code is `online_synth/gen_sound.py`
+  
+If one wish to render the corresponding video as well, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also ffmepg is need if one needs to combine seperate sound track or rendered images into a single soundtrack / video.
+  
+`gen_sound.py` takes several arguments, one can use -r to skip rendering and -v to skip compining rendered images and sound into a single video. One also needs to specify the scene id, the object id and material id. An example usage is
+
+`gen_sound.py scene-id object1-id material-for-object1-id object2-id material-for-object2-id`
+
+# Manual installation
+
 #### Building **Modal Sound**
   
 One can run `modelsound/auto_install.sh` to install all required libraries and build the necessary binaries.
@@ -55,16 +82,7 @@ We solve the Helmholz equation related to sound propagation using a direct BEM m
 2. For the FMM BEM method, one needs to install the [FMMlib3d libraries](https://cims.nyu.edu/cmcl/fmm3dlib/fmm3dlib.html) and specify its path in `pre_compute/run_precalc.sh`.
   
 A auto install script is provided in `pre_compute/extertal/auto_install.sh`. Note that you need to specify your matlab installation path in the first line of `auto_install.sh`. 
-  
-#### Running pre-conmputation
-  
-One can run precomputation using either `pre_compute/run_precalc_bem.sh` or `pre_compute/run_precalc.sh`. Note that for object with small number of faces, the direct method is usually faster.
-  
-Note that you need to pass an object id followed by a material id to the script. The folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`, all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`
-  
-### Online synthesis
- 
-The online synthesis part use [bullet](https://github.com/bulletphysics/bullet3) for physical simulation and a modified version of [Modal Sound Synthesis](https://github.com/cxzheng/ModalSound) for sound synthesis.
+
  
 #### Building **Bullet**
   
@@ -83,16 +101,8 @@ If you need to modify our simulation code, they are located in `bullet3/modified
 Refer to **offline pre-computation**, which should build this binary as well.
   
 The built binary is located in `modal_sound/build/bin/click_synth`
-  
-#### Running online simulation
-  
-The entry code is `online_synth/gen_sound.py`
-  
-If one wish to render the corresponding video as well, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also ffmepg is need if one needs to combine seperate sound track or rendered images into a single soundtrack / video.
-  
-`gen_sound.py` takes several arguments, one can use -r to skip rendering and -v to skip compining rendered images and sound into a single video. One also needs to specify the scene id, the object id and material id. An example usage is
 
-`gen_sound.py scene-id object1-id material-for-object1-id object2-id material-for-object2-id`
+
   
 # Data
    
