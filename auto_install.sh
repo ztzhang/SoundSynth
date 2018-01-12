@@ -12,16 +12,16 @@ PROJECT_PATH=$('pwd')
 
 #modal sound
 cd modal_sound
-#./auto_install.sh
+./auto_install.sh
 
 # bullet
 cd $PROJECT_PATH
 cd bullet3/build3
 ./premake4_linux64 gmake
 cd gmake
-#make App_RigidBodyFromObjExampleGui
+make App_RigidBodyFromObjExampleGui
 
 # Precompute
 cd $PROJECT_PATH
 cd pre_compute/external
-#./auto_install.sh
+./auto_install.sh
