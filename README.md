@@ -22,7 +22,7 @@ Then, simply run `./auto_install.sh`. This should install all the necessary comp
 
 The script relies on GCC and CMake. We have tested it with GCC 6.3.0 and CMake 3.7.1.
  
-If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the following sections for customized installation and usage. 
+If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [following sections](#manual-installation) for customized installation and usage. 
  
 # Usage
  
@@ -96,11 +96,6 @@ A auto install script is provided in `pre_compute/extertal/auto_install.sh`. Not
   
 If you need to modify our simulation code, they are located in `bullet3/modified_scripts`
   
-#### Building Modal Sound
-  
-Refer to **offline pre-computation**, which should build this binary as well.
-  
-The built binary is located in `modal_sound/build/bin/click_synth`
 
 
   
