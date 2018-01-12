@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #install nihu
-MATLAB_PATH=/afs/csail/common/matlab/2016b/ #YOUR_MATLAB_PATH
+#MATLAB_PATH=YOUR_MATLAB_PATH
 git clone -b release_1.1 git://last.hit.bme.hu/toolbox/nihu.git
 cd nihu/
 mkdir build
