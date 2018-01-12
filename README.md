@@ -36,9 +36,9 @@ The input to pre-computation is a tetrahedron mesh. One can convert an ordinary 
   
 #### Running pre-computation
   
-Our pre-computation step utilizes two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, direct method is faster when your mesh has small number of faces, as FMM solver is faster and more memory efficient when the mesh has more faces. We suggest using direct solver when the mesh has less than 1000 faces. 
+Our pre-computation step utilizes two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, the direct method is faster when your mesh has small number of faces, as the FMM solver is faster and more memory efficient when the mesh has more faces. We suggest using the direct solver for meshes with less than 1000 faces. 
 
-One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`.Note that you need to pass an object id followed by a material id to the script. The data folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`, all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
+One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`. Note that you need to pass an object id followed by a material id to the script. The data folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`; all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
 
 `./run_precalc.sh 0 1`
 
