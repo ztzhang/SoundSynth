@@ -1,28 +1,29 @@
 #!/bin/bash
 
-#Protobuf
-#Protobuf_inlude_dir=/data/vision/billf/object-properties/sound/software/protobuf-2.6.0/build/include
-#Protobuf_lite_lib=/data/vision/billf/object-properties/sound/software/protobuf-2.6.0/build/lib/libprotobuf-lite.so.9.0.0
-#Protobuf_lib=/data/vision/billf/object-properties/sound/software/protobuf-2.6.0/build/lib/libprotobuf.so.9.0.0
-#Protoc_exe_dir=/data/vision/billf/object-properties/sound/software/protobuf-2.6.0/build/bin/protoc
+# Protobuf
+# Protobuf_include_dir=
+# Protobuf_lite_lib=
+# Protobuf_lib=
+# Protoc_exe_dir=
 
-#Boost
-#Boost_include_dir=/data/vision/billf/object-properties/local/include/boost
-#Boost_lib_dir=/data/vision/billf/object-properties/local/lib
+# Boost
+# Boost_include_dir=
+# Boost_lib_dir=
 
-#Eigen
-#Eigen_include_dir=/data/vision/billf/object-properties/sound/software/eigen3/include/eigen3
+# Eigen
+# Eigen_include_dir=
 
-#GSL
-#Gsl_include=/data/vision/billf/object-properties/sound/software/gsl-2.2
+# GSL
+# Gsl_include=
 
-#MKL
-#Mkl_lib=/data/vision/billf/object-properties/sound/software/mkl/mkl/lib/intel64/
+# MKL
+# Mkl_lib=
 
-#IOMP5
-#Iomp5_path=/data/vision/billf/object-properties/sound/software/lib
+# IOMP5
+# Iomp5_path=
 
 mkdir -p build_test
 cd build_test
+
 install_prefix=$(pwd)"/bin"
-cmake .. -DProtobuf_INCLUDE_DIR=$Protobuf_inlude_dir -DProtobuf_LITE_LIBRARY=$Protobuf_lite_lib -DBOOST_INCLUDEDIR=$Boost_include_dir -DBOOST_LIBRARYDIR=$Boost_lib_dir -DProtobuf_PROTOC_EXECUTABLE=$Protoc_exe_dir -DProtobuf_LIBRARY=$Protobuf_lib -DEIGEN_INCLUDE_DIR=$Eigen_include_dir -DGSL_INCLUDE_DIR=$Gsl_include -DMKL_LIB=$Mkl_lib -DIOMP5_PATH=$Iomp5_path -DCMAKE_INSTALL_PREFIX=$install_prefix
+cmake .. -DProtobuf_INCLUDE_DIR=$Protobuf_include_dir -DProtobuf_LITE_LIBRARY=$Protobuf_lite_lib -DBOOST_INCLUDEDIR=$Boost_include_dir -DBOOST_LIBRARYDIR=$Boost_lib_dir -DProtobuf_PROTOC_EXECUTABLE=$Protoc_exe_dir -DProtobuf_LIBRARY=$Protobuf_lib -DEIGEN_INCLUDE_DIR=$Eigen_include_dir -DGSL_INCLUDE_DIR=$Gsl_include -DMKL_LIB=$Mkl_lib -DIOMP5_PATH=$Iomp5_path -DCMAKE_INSTALL_PREFIX=$install_prefix
