@@ -1,5 +1,11 @@
 #!/bin/bash
 
+cur_path=$('pwd')
+# compile file generators
+cd ../../file_generator
+./compile_cpps.sh
+cd $cur_path
+
 # install nihu
 # MATLAB_PATH=YOUR_MATLAB_PATH
 
