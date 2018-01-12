@@ -22,4 +22,4 @@ cd ../../
 git clone https://github.com/zgimbutas/fmmlib3d.git
 sudo apt-get install bison flex octave liboctave-dev
 cd fmmlib3d/
-make test
+make mex
