@@ -59,13 +59,13 @@ If one wish to render the corresponding video as well, you need to install [Blen
 
 `gen_sound.py scene-id object1-id material-for-object1-id object2-id material-for-object2-id`
 
-# Manual installation
+# Manual Installation
 
 #### Building **Modal Sound**
   
-One can run `modelsound/auto_install.sh` to install all required libraries and build the necessary binaries.
+One can run `modelsound/auto_install.sh` to install all required libraries and build all the necessary binaries.
   
-If you wish to mannully install the libraries or customize their locations, please see [this document](https://github.com/ztzhang/SoundSynth/blob/master/documents/building_modalsound.md) for a detailed description. 
+If you wish to mannully install the libraries or to customize their locations, please see [this document](https://github.com/ztzhang/SoundSynth/blob/master/documents/building_modalsound.md) for a detailed description. 
   
 #### Building file generators
   
