@@ -38,7 +38,7 @@ The input to pre-computation is a tetrahedron mesh. One can convert an ordinary 
   
 Our pre-computation step utilizes two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, direct method is faster when your mesh has small number of faces, as FMM solver is faster and more memory efficient when the mesh has more faces. We suggest using direct solver when the mesh has less than 1000 faces. 
 
-One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`.Note that you need to pass an object id followed by a material id to the script. The folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`, all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
+One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`.Note that you need to pass an object id followed by a material id to the script. The data folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`, all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
 
 `./run_precalc.sh 0 1`
 
@@ -53,9 +53,9 @@ The online synthesis part use [bullet](https://github.com/bulletphysics/bullet3)
   
 The entry code is `online_synth/gen_sound.py`
   
-If one wish to render the corresponding video as well, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also ffmepg is need if one needs to combine seperate sound track or rendered images into a single soundtrack / video.
+If one wish to render the corresponding video as well, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also ffmepg is need if one needs to combine seperate sound tracks or rendered images into a single soundtrack / video.
   
-`gen_sound.py` takes several arguments, one can use -r to skip rendering and -v to skip compining rendered images and sound into a single video. One also needs to specify the scene id, the object id and material id. An example usage is
+`gen_sound.py` takes several arguments, one can use -r to skip rendering and -v to skip compining rendered images and sound tracks into a single video. One also needs to specify the scene id, the object id and material id. An example usage is
 
 `gen_sound.py scene-id object1-id material-for-object1-id object2-id material-for-object2-id`
 
