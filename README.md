@@ -88,7 +88,7 @@ A auto install script is provided in `pre_compute/extertal/auto_install.sh`. Not
   
 1. enter `Bullet3/build3`
   
-2. run `premake_linux64 gmake`
+2. run `premake4_linux64 gmake`
   
 3. enter gmake, run `make App_RigidBodyFromObjExampleGui`
   
