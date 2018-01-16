@@ -294,7 +294,7 @@ if __name__ == '__main__':
         objResultPath += '-%d' % objs[k].objId
         matResultPath += '-%d' % objs[k].matId
 
-    resultPath = os.path.join(ROOT, 'result_v1_1', 'scene-%d' %
+    resultPath = os.path.join(ROOT, 'result', 'scene-%d' %
                               sceneid, objResultPath, matResultPath)
     simFilePath = os.path.join(resultPath, 'sim')
     renderPath = os.path.join(resultPath, 'render')
