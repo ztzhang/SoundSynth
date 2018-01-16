@@ -28,7 +28,7 @@ If you prefer to install the dependencies manually (e.g., you don't have sudo ac
 
 After auto installation, run
 
-`python online_synth/gen_sound.py -r 1000 101 4 1 2`.
+`python online_synth/gen_sound.py -r 1000 101 4 1 2`
 
 You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav)
 
