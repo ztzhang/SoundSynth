@@ -119,6 +119,6 @@ If you need to modify our simulation code, they are located in `bullet3/modified
    
 [Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`
 
-Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download pre-compute data and place it in the right place for you.
+Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
 
 [Sound-20k (Soundtrack only, no video)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
