@@ -1,8 +1,6 @@
 #!/bin/bash
-#set -x
-set -e
-
 PROJECT_ROOT=/data/vision/billf/object-properties/sound/ztzhang/SoundSynth
+set -e
 
 ######################## Color Settings ########################
 RED='\033[1;31m'

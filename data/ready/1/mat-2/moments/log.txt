@@ -1,0 +1,660 @@
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.5374e+02 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 653.740000
+Wave number (K)         = 11.975421
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 16
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.2181e+02 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 621.810000
+Wave number (K)         = 11.390517
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 16
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 1.0128e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 1012.800000
+Wave number (K)         = 18.552799
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 17
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 1.3885e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 1388.500000
+Wave number (K)         = 25.434994
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 17
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 1.3885e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 1388.500000
+Wave number (K)         = 25.434994
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 17
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 2.2007e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 2200.700000
+Wave number (K)         = 40.313137
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 18
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 2.2007e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 2200.700000
+Wave number (K)         = 40.313137
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 18
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 2.3407e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 2340.700000
+Wave number (K)         = 42.877702
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 18
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 2.3409e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 2340.900000
+Wave number (K)         = 42.881366
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 18
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.3495e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3349.500000
+Wave number (K)         = 61.357228
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.3499e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3349.900000
+Wave number (K)         = 61.364555
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.4389e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3438.900000
+Wave number (K)         = 62.994886
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.4389e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3438.900000
+Wave number (K)         = 62.994886
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.5908e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3590.800000
+Wave number (K)         = 65.777440
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.5926e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3592.600000
+Wave number (K)         = 65.810413
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.8929e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3892.900000
+Wave number (K)         = 71.311405
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.8929e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3892.900000
+Wave number (K)         = 71.311405
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 3.8986e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 3898.600000
+Wave number (K)         = 71.415820
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 20
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 4.6499e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 4649.900000
+Wave number (K)         = 85.178377
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 21
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 4.6515e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 4651.500000
+Wave number (K)         = 85.207686
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 21
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 4.8882e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 4888.200000
+Wave number (K)         = 89.543634
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 22
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.1077e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5107.700000
+Wave number (K)         = 93.564506
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 22
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.1077e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5107.700000
+Wave number (K)         = 93.564506
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 22
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.1466e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5146.600000
+Wave number (K)         = 94.277089
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 22
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.1466e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5146.600000
+Wave number (K)         = 94.277089
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 22
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.6935e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5693.500000
+Wave number (K)         = 104.295381
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.6936e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5693.600000
+Wave number (K)         = 104.297212
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.9507e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5950.700000
+Wave number (K)         = 109.006854
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 5.9507e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 5950.700000
+Wave number (K)         = 109.006854
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.0415e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6041.500000
+Wave number (K)         = 110.670158
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.0418e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6041.800000
+Wave number (K)         = 110.675653
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 23
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.7053e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6705.300000
+Wave number (K)         = 122.829861
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 24
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.7055e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6705.500000
+Wave number (K)         = 122.833525
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 24
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.7085e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6708.500000
+Wave number (K)         = 122.888480
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 24
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 6.7088e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 6708.800000
+Wave number (K)         = 122.893975
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 24
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.3175e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7317.500000
+Wave number (K)         = 134.044340
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.3211e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7321.100000
+Wave number (K)         = 134.110286
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.3439e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7343.900000
+Wave number (K)         = 134.527943
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.5411e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7541.100000
+Wave number (K)         = 138.140317
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.5429e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7542.900000
+Wave number (K)         = 138.173290
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 7.8028e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 7802.800000
+Wave number (K)         = 142.934222
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 25
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.1793e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8179.300000
+Wave number (K)         = 149.831072
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.1793e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8179.300000
+Wave number (K)         = 149.831072
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.3064e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8306.400000
+Wave number (K)         = 152.159331
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.3064e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8306.400000
+Wave number (K)         = 152.159331
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.3581e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8358.100000
+Wave number (K)         = 153.106388
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.3581e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8358.100000
+Wave number (K)         = 153.106388
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.4484e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8448.400000
+Wave number (K)         = 154.760533
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.4484e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8448.400000
+Wave number (K)         = 154.760533
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.7415e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8741.500000
+Wave number (K)         = 160.129634
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 8.7415e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 8741.500000
+Wave number (K)         = 160.129634
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 26
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.4193e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9419.300000
+Wave number (K)         = 172.545794
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 27
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.4193e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9419.300000
+Wave number (K)         = 172.545794
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 27
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.6086e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9608.600000
+Wave number (K)         = 176.013453
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 27
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.6094e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9609.400000
+Wave number (K)         = 176.028108
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 27
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.7754e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9775.400000
+Wave number (K)         = 179.068949
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 28
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.7754e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9775.400000
+Wave number (K)         = 179.068949
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 28
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.9044e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9904.400000
+Wave number (K)         = 181.432013
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 28
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 9.9045e+03 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 9904.500000
+Wave number (K)         = 181.433845
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 28
+======================================================
+[1;32mMESSAGE:[0m [37mread solution:   Freq. No. =   1,  f = 1.0048e+04 (Hz),  k = (0.1832D+01, 0.0000D+00):
+[0m============ Equivalent Source Simulation ============
+Number of elements      = 4368
+Number of nodes         = 2186
+Number of field points  = 0
+Frequency               = 10048.000000
+Wave number (K)         = 184.062525
+Speed of sound (c)      = 343.000000
+Mass density (rho)      = 1.184000
+# of FMM expansions     = 28
+======================================================

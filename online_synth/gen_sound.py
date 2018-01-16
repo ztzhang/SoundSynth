@@ -9,10 +9,22 @@ import subprocess
 import math
 import getopt
 
+# specify blender path if you wish to render:
+BLENDER = ''
 
+# Auto detect project path and update related shell scripts
 ROOT_DIR = os.path.abspath(os.path.dirname(sys.argv[0])) + '/../'
 ROOT_DIR = os.path.abspath(ROOT_DIR)
-BLENDER = '/data/vision/billf/object-properties/sound/software/blender/blender'
+with open(os.path.join(ROOT_DIR, 'online_synth', 'prepare_dat_template.sh')) as f:
+    lines = f.readlines()
+with open(os.path.join(ROOT_DIR, 'online_synth', 'prepare_dat.sh'), 'w') as f:
+    lines[1] = 'PROJECT_ROOT=%s\n' % ROOT_DIR
+    f.writelines(lines)
+with open(os.path.join(ROOT_DIR, 'online_synth', 'prepare_ini_template.sh')) as f:
+    lines = f.readlines()
+with open(os.path.join(ROOT_DIR, 'online_synth', 'prepare_ini.sh'), 'w') as f:
+    lines[1] = 'PROJECT_ROOT=%s\n' % ROOT_DIR
+    f.writelines(lines)
 
 
 class Obj:
@@ -79,7 +91,7 @@ class Obj:
                 self.ROOT, 'data/ready', '%d' % self.objId, '%d.orig.obj' % self.objId)
         if self.active == 1:
             volumefile = open(os.path.join(
-                self.ROOT, 'data/final100/%d/models/volume.txt' % self.objId))
+                self.ROOT, 'data/ready/%d/volume.txt' % self.objId))
             self.mass = float(volumefile.readline()) * self.density / 50
 
     def Load(self):
@@ -358,9 +370,9 @@ if __name__ == '__main__':
                 print('sh %s' % os.path.join(ROOT, 'script', 'prepare_ini.sh') + ' -i %d ' % obj_id
                       + objs[obj_id].WriteShellCmd())
 
-                if os.path.exists('../%04d.wav' % (objs[obj_id].objId)):
+                if os.path.exists('../%04d.wav' % (obj_id)):
                     print('WAV FOUND!')
-                if os.path.exists('../%04d.raw' % (objs[obj_id].objId)):
+                if os.path.exists('../%04d.raw' % (obj_id)):
                     print('RAW FOUND!')
 
                 if is_overwrite:
@@ -369,9 +381,9 @@ if __name__ == '__main__':
                     subprocess.call('rm *.raw', shell=True)
                     if os.path.exists('../%04d.wav' % (objs[obj_id].objId)):
                         subprocess.call('rm ../%04d.wav' %
-                                        (objs[obj_id].objId), shell=True)
+                                        (obj_id), shell=True)
 
-                if not os.path.exists('./../%04d.wav' % (obj_id)) or not os.path.exists('./../%04d.raw' % (obj_id)):
+                if not os.path.exists('./../%04d.wav' % (obj_id)) or not os.path.exists('./../%04d.raw' % (obj_id)) or is_overwrite == True:
                     print('wav not generated yet, working on it !')
                     subprocess.call('rm *.wav', shell=True)
                     subprocess.call('rm *.raw', shell=True)
@@ -393,10 +405,10 @@ if __name__ == '__main__':
                                 objs[obj_id].objId, shell=True)
                 subprocess.call('unlink %d.ev' %
                                 objs[obj_id].objId, shell=True)
-                #subprocess.call('unlink %d.obj'%obj.objId,shell=True)
-                #subprocess.call('unlink %d.orig.obj'%obj.objId,shell=True)
+                # subprocess.call('unlink %d.obj'%obj.objId,shell=True)
+                # subprocess.call('unlink %d.orig.obj'%obj.objId,shell=True)
             # copy all wav file to parent folder
-            #subprocess.call('mv *.wav ./../',shell=True)
+            # subprocess.call('mv *.wav ./../',shell=True)
 
         if skip_rendering != True and (not os.path.exists('./../sli.mp4') or is_overwrite):
             # subprocess.call(
@@ -425,32 +437,31 @@ if __name__ == '__main__':
                 blendercfg.write(configfile)
 
             # unset python path, call blender and source
-            blank = os.path.join(ROOT, 'script', 'blank.blend')
+            blank = os.path.join(ROOT, 'online_synth/render', 'blank.blend')
             blenderScript = os.path.join(
-                ROOT, 'script', 'blender_render_scene.py')
-            subprocess.call('unset PYTHONPATH', shell=True)
+                ROOT, 'online_synth/render', 'blender_render_scene.py')
             subprocess.call('%s %s --background --python %s %s %d' % (BLENDER, blank, blenderScript,
                                                                       os.path.join(simFilePath, 'blender_render.cfg'), skip_factor), shell=True)
-            #subprocess.call('source ~/.bash_profile',shell = True)
+            # subprocess.call('source ~/.bash_profile',shell = True)
     if skip_video != True:
         actobj_num = []
-        for obj in objs:
+        for idx, obj in enumerate(objs):
             if obj.mass != 0:
-                actobj_num.append(obj)
-        ffmpeg_video_cmd =\
-            'ffmpeg -r 30 -pattern_type glob -i \'./render/*.png\' -pix_fmt yuv420p -crf 0 -vcodec libx264 sli.mp4 -y'
+                actobj_num.append(idx)
+        ffmpeg_video_cmd = 'ffmpeg -r 30 -pattern_type glob -i \'./render/*.png\' -pix_fmt yuv420p -crf 0 -vcodec libx264 sli.mp4 -y'
         ffmpeg_audio_cmd = 'ffmpeg '
         if len(actobj_num) == 1:
-            ffmpeg_audio_cmd = 'cp obj-%04d.wav merged.wav' % (
-                actobj_num[0].objId)
+            ffmpeg_audio_cmd = 'cp %04d.wav merged.wav' % (
+                actobj_num[0])
         else:
             for k in range(0, len(actobj_num)):
-                ffmpeg_audio_cmd += '-i obj-%04d.wav ' % (actobj_num[k].objId)
-            ffmpeg_audio_cmd += '-filter_complex -filter_complex amix=inputs=%d:duration=longest merged.wav -y' % (
+                ffmpeg_audio_cmd += '-i %04d.wav ' % (actobj_num[k])
+            ffmpeg_audio_cmd += '-filter_complex amix=inputs=%d:duration=longest merged.wav -y' % (
                 len(actobj_num))
         ffmpeg_movie_cmd = 'ffmpeg -i sli.mp4 -i merged.wav -crf 0 -vcodec libx264 result.mp4 -y'
         with cd(resultPath):
-            #subprocess.call('rm -rf sli.mp4 merged.wav result.mp4',shell=True)
+            # subprocess.call('rm -rf sli.mp4 merged.wav
+            # result.mp4',shell=True)
             print('calling %s\n' % ffmpeg_video_cmd)
             subprocess.call(ffmpeg_video_cmd, shell=True)
             print('calling %s\n' % ffmpeg_audio_cmd)

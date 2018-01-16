@@ -1,8 +1,8 @@
 #!/bin/bash
 PROJECT_ROOT=/data/vision/billf/object-properties/sound/ztzhang/SoundSynth
 
-
-CLICKSYNTH=$PROJECT_ROOT"/modal_sound/build/bin/click_synth"
+CLICKSYNTH=${PROJECT_ROOT}/modal_sound/build/bin/click_synth
+echo $CLICKSYNTH
 set -e
 ######################## Color Settings ########################
 RED='\033[1;31m'
