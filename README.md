@@ -42,9 +42,9 @@ To play with more objects & materials, run `get_precompute_data.sh` to download 
 
 # Data
    
-[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`. Please place the unzipped folder in `data`. Or, `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
+[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`. Please place the unzipped folder in `data`. Alternatively, `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
 
-[Sound-20k (Soundtrack only, 25G)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): the dataset we used in the ICCV 2017 paper. Metadata can be found in `data/data_entry.txt`.
+[Sound-20k (Soundtrack only, 25G)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): the dataset used in our ICCV 2017 paper. Metadata can be found in `data/data_entry.txt`.
  
 # Usage
  
