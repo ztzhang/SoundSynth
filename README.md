@@ -22,7 +22,21 @@ Then, simply run `./auto_install.sh`. This should install all the necessary comp
 
 The script relies on GCC and CMake. We have tested it with GCC 6.3.0 and CMake 3.7.1.
  
-If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [following sections](#manual-installation) for customized installation and usage. 
+If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [following sections](#manual-installation) for customized installation and usage.
+
+# Demo
+
+After auto installation, run
+
+`python online_synth/gen_sound.py -r 1000 101 4 1 2`.
+
+You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav)
+
+To render the corresponding video, you need to specify the path to blender in `gen_sound.py`. Then, the commnad
+
+`python online_synth/gen_sound.py 1000 101 4 1 2`
+
+will also render the physical process for you.
  
 # Usage
  
