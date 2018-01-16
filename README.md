@@ -37,6 +37,8 @@ To render the corresponding video, you need to specify the path to [Blender](htt
 `python online_synth/gen_sound.py 1000 101 4 1 2`
 
 will also render the physical process for you.
+
+If you wish to play with more objects & materials, run `get_precompute_data.sh` to download our pre-computed data. All possble object/material combinations are listed in `data/obj_mat_list.txt`. 
  
 # Usage
  
@@ -115,6 +117,8 @@ If you need to modify our simulation code, they are located in `bullet3/modified
   
 # Data
    
-Object data after precomputation: To be released
-   
-Sound-20k (Soundtrack only, no video): To be released.
+[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`
+
+Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download pre-compute data and place it in the right place for you.
+
+[Sound-20k (Soundtrack only, no video)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
