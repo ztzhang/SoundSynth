@@ -36,7 +36,7 @@ To render the corresponding video, you need to specify the path to [Blender](htt
 
 `python online_synth/gen_sound.py 1000 101 4 1 2`
 
-will also render the physical process for you.The generated video should look like [this](http://sound.csail.mit.edu/data/result.mp4)
+will also render the physical process for you. The generated video should look like [this](http://sound.csail.mit.edu/data/result.mp4)
 
 If you wish to play with more objects & materials, run `get_precompute_data.sh` to download our pre-computed data. All possble object/material combinations are listed in `data/obj_mat_list.txt`. 
  
