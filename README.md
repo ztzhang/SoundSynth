@@ -12,7 +12,7 @@ Project page:  [http://sound.csail.mit.edu/](http://sound.csail.mit.edu/)
 
 Our code has been tested on 64-bit Ubuntu 14.04.5.
  
-We provide auto install scripts for all required libraies except Matlab & [MKL](https://software.intel.com/en-us/mkl). You need to modify `auto_install.sh` to indicate the paths to MKL libraries, libiomp5 (often included in an MKL install), and Matlab.
+We provide auto install scripts for all required libraries except Matlab & [MKL](https://software.intel.com/en-us/mkl). You need to modify `auto_install.sh` to indicate the paths to MKL libraries, libiomp5 (often included in an MKL install), and Matlab.
  
 Then, simply run `./auto_install.sh` (requires sudo privileges). This should install all the necessary components for you to synthesize sound, including
 - [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
@@ -38,7 +38,7 @@ To render the corresponding video, you need to specify the path to [Blender](htt
 
 It should now render the video as well. The generated video should look like [this](http://sound.csail.mit.edu/data/result.mp4).
 
-To play with more objects & materials, run `get_precompute_data.sh` to download our pre-computed data. All possble object/material combinations are listed in `data/obj_mat_list.txt`. 
+To play with more objects & materials, run `get_precompute_data.sh` to download our pre-computed data. All possible object/material combinations are listed in `data/obj_mat_list.txt`. 
 
 # Data
    
@@ -54,7 +54,7 @@ The definitions of scenes and materials are located in the `config` folder.
  
 ### Offline pre-computation
   
-The input to offine pre-computation is a tetrahedron mesh. One can convert an ordinary triangular mesh to a tetrahedron mesh using [TetGen](http://wias-berlin.de/software/tetgen/) or [IsoStuffer](https://github.com/cxzheng/ModalSound), as described by [Labelle and Shewchuk 2007](http://www.cs.berkeley.edu/~jrs/papers/stuffing.pdf).
+The input to offline pre-computation is a tetrahedron mesh. One can convert an ordinary triangular mesh to a tetrahedron mesh using [TetGen](http://wias-berlin.de/software/tetgen/) or [IsoStuffer](https://github.com/cxzheng/ModalSound), as described by [Labelle and Shewchuk 2007](http://www.cs.berkeley.edu/~jrs/papers/stuffing.pdf).
   
 #### Running pre-computation
   
@@ -64,7 +64,7 @@ One can run pre-computation using the direct method via `pre_compute/run_precalc
 
 `./run_precalc.sh 0 1`
 
-will pre-compute object 0 with material 1 defined in `config/material/material-1.cfg` using the FMM solver. 
+will pre-compute object 0 with material 1 defined in `config/material/material-1.cfg` using the FMM solver.
 
 ### Online synthesis
  
@@ -74,9 +74,9 @@ The online synthesis part uses [Bullet](https://github.com/bulletphysics/bullet3
   
 The main file is `online_synth/gen_sound.py`.
   
-As described above, for video rendering, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also [FFmepg](https://www.ffmpeg.org) is used to combine seperate sound tracks or rendered images into a single soundtrack / video.
+As described above, for video rendering, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also [FFmpeg](https://www.ffmpeg.org) is used to combine separate sound tracks or rendered images into a single soundtrack / video.
   
-`gen_sound.py` has some options. For example, one can use `-r` to skip rendering and `-v` to skip compining rendered images and sound tracks into a single video. Please refer to the help function for a detailed explanation. 
+`gen_sound.py` has some options. For example, one can use `-r` to skip rendering and `-v` to skip combining rendered images and sound tracks into a single video. Please refer to the help function for a detailed explanation. 
 
 To use the script, one needs to specify the scene id, and a number of paired object id and material id, as
 
@@ -90,7 +90,7 @@ To use the script, one needs to specify the scene id, and a number of paired obj
   
 One can run `modelsound/auto_install.sh` to install all required libraries and build all the necessary binaries.
   
-If you wish to mannully install the libraries or to customize their locations, please see [this document](https://github.com/ztzhang/SoundSynth/blob/master/documents/building_modalsound.md) for a detailed description. 
+If you wish to manually install the libraries or to customize their locations, please see [this document](https://github.com/ztzhang/SoundSynth/blob/master/documents/building_modalsound.md) for a detailed description. 
   
 #### Building file generators
   
@@ -99,12 +99,12 @@ If you wish to mannully install the libraries or to customize their locations, p
   
 #### Installing BEM/FMM Solver
   
-We solve the Helmholz equation related to sound propagation using a direct BEM method and an accelerated version using FMM. 
+We solve the Helmholtz equation related to sound propagation using a direct BEM method and an accelerated version using FMM. 
   
-1. For the direct BEM method, one needs to install the [Nihu matlab library](http://last.hit.bme.hu/nihu/index.html) and specify its path in `pre_compute/run_precalc_bem.sh`.
+1. For the direct BEM method, one needs to install the [Nihu Matlab library](http://last.hit.bme.hu/nihu/index.html) and specify its path in `pre_compute/run_precalc_bem.sh`.
 2. For the FMM BEM method, one needs to install the [FMMlib3d libraries](https://cims.nyu.edu/cmcl/fmm3dlib/fmm3dlib.html) and specify its path in `pre_compute/run_precalc.sh`.
   
-A auto-install script is provided in `pre_compute/extertal/auto_install.sh`. Note that you need to specify your Matlab installation path in the first line of `auto_install.sh`. 
+An auto-install script is provided in `pre_compute/external/auto_install.sh`. Note that you need to specify your Matlab installation path in the first line of `auto_install.sh`. 
 
  
 #### Building Bullet
