@@ -121,4 +121,4 @@ If you need to modify our simulation code, they are located in `bullet3/modified
 
 Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
 
-[Sound-20k (Soundtrack only, no video)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
+[Sound-20k (Soundtrack only, 25G)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
