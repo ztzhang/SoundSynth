@@ -30,7 +30,7 @@ After auto installation, run (with Python 3 and [FFmpeg](https://www.ffmpeg.org/
 
 `python online_synth/gen_sound.py -r 1000 101 4 1 2`
 
-You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav). Here, `-r` indicates rendering audio only (no video). The first number `1000` is the ID of the scene. Each of the following pair describes an object (its ID and material): `101` is for the floor, and `4` indicates it's made of wood; `1` is for the object (plate) and `2` is for its material (steel). You can also add in more objects by specifying more parameters. 
+You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav). Here, `-r` indicates rendering audio only (no video). The first number `1000` is the ID of the scene. Each of the following pair describes an object (its ID and material): `101` is for the floor, and `4` indicates it's made of wood; `1` is for the object (plate) and `2` is for its material (steel). You can also add in more objects by specifying different parameters. 
 
 To render the corresponding video, you need to specify the path to [Blender](https://www.blender.org/) in `gen_sound.py`. Then, run the same command but this time without `-r`
 
