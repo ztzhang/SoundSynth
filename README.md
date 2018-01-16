@@ -22,7 +22,23 @@ Then, simply run `./auto_install.sh`. This should install all the necessary comp
 
 The script relies on GCC and CMake. We have tested it with GCC 6.3.0 and CMake 3.7.1.
  
-If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [following sections](#manual-installation) for customized installation and usage. 
+If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [following sections](#manual-installation) for customized installation and usage.
+
+# Demo
+
+After auto installation, run
+
+`python online_synth/gen_sound.py -r 1000 101 4 1 2`.
+
+You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav)
+
+To render the corresponding video, you need to specify the path to [Blender](https://www.blender.org/) in `gen_sound.py`. Then, the commnad
+
+`python online_synth/gen_sound.py 1000 101 4 1 2`
+
+will also render the physical process for you.
+
+If you wish to play with more objects & materials, run `get_precompute_data.sh` to download our pre-computed data. All possble object/material combinations are listed in `data/obj_mat_list.txt`. 
  
 # Usage
  
@@ -101,6 +117,8 @@ If you need to modify our simulation code, they are located in `bullet3/modified
   
 # Data
    
-Object data after precomputation: To be released
-   
-Sound-20k (Soundtrack only, no video): To be released.
+[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`
+
+Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download pre-compute data and place it in the right place for you.
+
+[Sound-20k (Soundtrack only, no video)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
