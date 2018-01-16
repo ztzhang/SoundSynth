@@ -12,7 +12,7 @@ Project page:  [http://sound.csail.mit.edu/](http://sound.csail.mit.edu/)
 
 Our code has been tested on 64-bit Ubuntu 14.04.5.
  
-We provide auto install scripts for all required libraies except Matlab & MKL. You need to modify `auto_install.sh` to indicate the paths to MKL libraries, libiomp5 (often included in an MKL install), and Matlab.
+We provide auto install scripts for all required libraies except Matlab & [MKL](https://software.intel.com/en-us/mkl). You need to modify `auto_install.sh` to indicate the paths to MKL libraries, libiomp5 (often included in an MKL install), and Matlab.
  
 Then, simply run `./auto_install.sh` (requires sudo privileges). This should install all the necessary components for you to synthesize sound, including
 - [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
@@ -20,13 +20,13 @@ Then, simply run `./auto_install.sh` (requires sudo privileges). This should ins
 - [Protobuf 2.6.0](https://github.com/google/protobuf)
 - [GSL](https://www.gnu.org/software/gsl/doc/html/index.html)
 
-The script relies on GCC and CMake. We have tested it with GCC 6.3.0 and CMake 3.7.1.
+The script relies on [GCC](https://gcc.gnu.org/) and [CMake](https://cmake.org/). We have tested it with GCC 6.3.0 and CMake 3.7.1.
  
 If you prefer to install the dependencies manually (e.g., you don't have sudo access), please refer to the [manual installation section at the end of the document](#manual-installation) for instructions on customized installation and usage.
 
 # Demo
 
-After auto installation, run (with Python 3 and FFmpeg)
+After auto installation, run (with Python 3 and [FFmpeg](https://www.ffmpeg.org/))
 
 `python online_synth/gen_sound.py -r 1000 101 4 1 2`
 
@@ -48,7 +48,7 @@ To play with more objects & materials, run `get_precompute_data.sh` to download 
  
 # Usage
  
-The code is structured as two seperate parts: **offline pre-computation** and **online synthesis**.
+The code is structured as two separate parts: **offline pre-computation** and **online synthesis**.
  
 The definitions of scenes and materials are located in the `config` folder.
  
@@ -74,7 +74,7 @@ The online synthesis part uses [Bullet](https://github.com/bulletphysics/bullet3
   
 The main file is `online_synth/gen_sound.py`.
   
-As described above, for video rendering, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also FFmepg is used to combine seperate sound tracks or rendered images into a single soundtrack / video.
+As described above, for video rendering, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also [FFmepg](https://www.ffmpeg.org) is used to combine seperate sound tracks or rendered images into a single soundtrack / video.
   
 `gen_sound.py` has some options. For example, one can use `-r` to skip rendering and `-v` to skip compining rendered images and sound tracks into a single video. Please refer to the help function for a detailed explanation. 
 
