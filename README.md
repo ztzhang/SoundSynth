@@ -42,15 +42,13 @@ To play with more objects & materials, run `get_precompute_data.sh` to download 
 
 # Data
    
-[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`
+[Object data after precomputation (6.3G)](http://sound.csail.mit.edu/data/pre_compute_data.zip): all possible object and material combinations are in `data/obj_mat_list.txt`. Please place the unzipped folder in `data`. Or, `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
 
-Please place the unzipped folder in `data` for the code to work properly. `get_precompute_data.sh` will download the pre-compute data and place it in the right place for you.
-
-[Sound-20k (Soundtrack only, 25G)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): Entries used to genreate this data are in `data/data_entry.txt`
+[Sound-20k (Soundtrack only, 25G)](http://sound.csail.mit.edu/data/sound-20k.tar.gz): the dataset we used in the ICCV 2017 paper. Metadata can be found in `data/data_entry.txt`.
  
 # Usage
  
-The code is structured as two seperate parts: **offline pre-compuation** and **online synthesis**.
+The code is structured as two seperate parts: **offline pre-computation** and **online synthesis**.
  
 The definitions of scenes and materials are located in the `config` folder.
  
@@ -60,17 +58,17 @@ The input to offine pre-computation is a tetrahedron mesh. One can convert an or
   
 #### Running pre-computation
   
-Our pre-computation step uses two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, the direct method is faster when your mesh has small number of faces, as the FMM solver is faster and more memory efficient when the mesh has more faces. We suggest using the direct solver for meshes with less than 1000 faces. 
+Our pre-computation step uses two different solvers for calculating sound propagation: a direct BEM solver and an accelerated BEM FMM solver. In short, the direct method is faster when your mesh has a small number of faces, and the FMM solver is faster and more memory-efficient when the mesh has more faces. We suggest using the direct solver for meshes with less than 1000 faces. 
 
-One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`. Note that you need to pass an object id followed by a material id to the script. The data folder sctruture should be as `data/DATASET_NAME/OBJECT_ID`; all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example:
+One can run pre-computation using the direct method via `pre_compute/run_precalc_bem.sh` or using the FMM solver via `pre_compute/run_precalc.sh`. Note that you need to pass an object id followed by a material id to the script. The structure of the data folder should be `data/DATASET_NAME/OBJECT_ID`; all generated files would be in `data/DATASET_NAME/OBJECT_ID/MATERIAL_ID`. For example
 
 `./run_precalc.sh 0 1`
 
-will pre-compute object 0 with material 1 defined in `config/material/material-1.cfg` using FMM solver. 
+will pre-compute object 0 with material 1 defined in `config/material/material-1.cfg` using the FMM solver. 
 
 ### Online synthesis
  
-The online synthesis part use [Bullet](https://github.com/bulletphysics/bullet3) for physical simulation and a modified version of [Modal Sound Synthesis](https://github.com/cxzheng/ModalSound) for sound synthesis.
+The online synthesis part uses [Bullet](https://github.com/bulletphysics/bullet3) for physical simulation and a modified version of [Modal Sound Synthesis](https://github.com/cxzheng/ModalSound) for sound synthesis.
 
 #### Running online simulation
   
@@ -78,9 +76,11 @@ The main file is `online_synth/gen_sound.py`.
   
 As described above, for video rendering, you need to install [Blender](https://www.blender.org/) and specify its path in `gen_sound.py`. Also FFmepg is used to combine seperate sound tracks or rendered images into a single soundtrack / video.
   
-`gen_sound.py` takes several arguments, one can use -r to skip rendering and -v to skip compining rendered images and sound tracks into a single video. One also needs to specify the scene id, the object id and the material id. An example usage is
+`gen_sound.py` has some options. For example, one can use `-r` to skip rendering and `-v` to skip compining rendered images and sound tracks into a single video. Please refer to the help function for a detailed explanation. 
 
-`gen_sound.py scene-id object1-id material-for-object1-id object2-id material-for-object2-id`
+To use the script, one needs to specify the scene id, and a number of paired object id and material id, as
+
+`gen_sound.py scene-id object1-id object1-material-id object2-id object2-material-id`
 
 # Manual Installation
 
@@ -104,7 +104,7 @@ We solve the Helmholz equation related to sound propagation using a direct BEM m
 1. For the direct BEM method, one needs to install the [Nihu matlab library](http://last.hit.bme.hu/nihu/index.html) and specify its path in `pre_compute/run_precalc_bem.sh`.
 2. For the FMM BEM method, one needs to install the [FMMlib3d libraries](https://cims.nyu.edu/cmcl/fmm3dlib/fmm3dlib.html) and specify its path in `pre_compute/run_precalc.sh`.
   
-A auto install script is provided in `pre_compute/extertal/auto_install.sh`. Note that you need to specify your matlab installation path in the first line of `auto_install.sh`. 
+A auto-install script is provided in `pre_compute/extertal/auto_install.sh`. Note that you need to specify your Matlab installation path in the first line of `auto_install.sh`. 
 
  
 #### Building Bullet
