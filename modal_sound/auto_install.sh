@@ -1,12 +1,10 @@
 #!/bin/bash
-#MKL_PATH
-#export Mkl_lib=/data/vision/billf/object-properties/sound/software/mkl/mkl/lib/intel64/
 
-#Iomp5 path
-#export Iomp5_path=/data/vision/billf/object-properties/sound/software/lib
+# MKL path
+# export Mkl_lib=
 
-
-
+# Iomp5 path
+# export Iomp5_path=
 
 # install Qt5
 sudo apt-get install qt5-default qttools-dev-tools
@@ -14,7 +12,7 @@ sudo apt-get install qt5-default qttools-dev-tools
 # install Gsl
 sudo apt-get install libgsl0-dev
 
-#install eigen
+# install eigen
 cd external
 if [ ! -d "./Eigen3" ]; then
     echo 'installing protobuf from current build'
@@ -25,10 +23,11 @@ if [ ! -d "./Eigen3" ]; then
     cd ..
 fi
 cd ..
-#install Boost
+
+# install Boost
 sudo apt-get install libboost-all-dev
 
-#install protobuf
+# install protobuf
 mkdir -p external
 cd external
 if [ ! -d "./protobuf-master/build" ]; then
@@ -45,22 +44,20 @@ if [ ! -d "./protobuf-master/build" ]; then
 fi
 cd ..
 
-#define path Vatiables:
-export Protobuf_inlude_dir=$('pwd')/external/protobuf-master/build/include
+# define path variables
+export Protobuf_include_dir=$('pwd')/external/protobuf-master/build/include
 export Protobuf_lite_lib=$('pwd')/external/protobuf-master/build/lib/libprotobuf-lite.so
 export Protobuf_lib=$('pwd')/external/protobuf-master/build/lib/libprotobuf.so
 export Protoc_exe_dir=$('pwd')/external/protobuf-master/build/bin/protoc
 
-#Boost
+# Boost
 export Boost_include_dir=/usr/include/boost
 export Boost_lib_dir=/usr/lib/x86_64-linux-gnu
 
-#Eigen
+# Eigen
 export Eigen_include_dir=$('pwd')/external/Eigen3
 
-#GSL
+# GSL
 export Gsl_include=/usr/include/gsl
-
-echo $Gsl_include
 
 ./run_cmake.sh
