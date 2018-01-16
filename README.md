@@ -32,7 +32,7 @@ After auto installation, run
 
 You will find the result in `result/scene-1000/obj-101-1/mat-4-2`. The generated audio should sound like [this](http://sound.csail.mit.edu/data/merged.wav)
 
-To render the corresponding video, you need to specify the path to blender in `gen_sound.py`. Then, the commnad
+To render the corresponding video, you need to specify the path to [Blender](https://www.blender.org/) in `gen_sound.py`. Then, the commnad
 
 `python online_synth/gen_sound.py 1000 101 4 1 2`
 
