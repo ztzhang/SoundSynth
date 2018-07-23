@@ -4,13 +4,13 @@ import os
 import subprocess
 
 
-ROOT_DIR = '../'
+ROOT_DIR = '..'
 DATASET_NAME = 'final100'
 
-MODALSOUND = ROOT_DIR + 'modal_sound/build/bin'
+MODALSOUND = ROOT_DIR + '/modal_sound/build/bin'
 EXTMAT = MODALSOUND + '/extmat'
 GENMOMENTS = MODALSOUND + '/gen_moments'
-FILEGENERATORS = ROOT_DIR + '/file_generators'
+FILEGENERATORS = ROOT_DIR + '/file_generator'
 
 
 class Obj:
@@ -87,10 +87,9 @@ if __name__ == '__main__':
     CreateDir(outPath)
     # call extmat, save to root
     with cd(outPath):
+        logfile = 'precalc.log'
         if not os.path.exists('obj-%d.tet' % obj.objId) or overwrite == 1:
-            # print not os.path.exists('obj-%d.tet'%obj.objId)
-            # print overwrite==1
-            #subprocess.call('unlink obj-%d.tet'%(obj.objId),shell=True)
+
             subprocess.call('ln -s ../obj-%d.tet obj-%d.tet' %
                             (obj.objId, obj.objId), shell=True)
 
@@ -102,7 +101,7 @@ if __name__ == '__main__':
     # call ev calculation, save to mat-id
         print('EV!')
         if not os.path.exists('obj-%d.ev' % obj.objId) or overwrite == 1:
-            subprocessx.call(renew, shell=True)
+
             cmd = 'matlab -nodisplay -nodesktop -nosplash -r "addpath(\'%s\'); ev_generator60(\'%s\', 60); quit"| tee -a %s' % (
                 FILEGENERATORS, 'obj-%d' % obj.objId, logfile)
             subprocess.call(cmd, shell=True)
@@ -118,13 +117,6 @@ if __name__ == '__main__':
         if not os.path.exists('./bem_input/init_bem.mat') or \
                 not os.path.exists('./bem_input/mesh.mat') or\
                 not os.path.exists('./bem_input/init_bem.mat') or overwrite == 1:
-            subprocess.call(renew, shell=True)
             cmd = 'matlab -nodisplay -nodesktop -nosplash -r "addpath(\'%s\');BEMInputGenerator(\'%s\', \'obj-%d\', %.5g, %.5g, %.5g,%d); quit" | tee -a %s'\
                 % (FILEGENERATORS, outPath, obj.objId, obj.density, obj.alpha, obj.beta, overwrite, logfile)
             subprocess.call(cmd, shell=True)
-
-
-# call FMM solver, save to mat-id
-
-
-# Calculate Moments

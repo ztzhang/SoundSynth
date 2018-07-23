@@ -1,5 +1,6 @@
 function FMMsolver(cur_dir,overwrite)
-addpath('/data/vision/billf/object-properties/sound/software/fmmlib3d-1.2/matlab');
+PATH_TO_fmmlib3d = % should point to fmmlib3d/matlab
+addpath(PATH_TO_fmmlib3d);
 root = cur_dir;
 prefix=[];
 if exist([root,'/bem_input/mesh.mat'],'file') &&exist([root,'/bem_input',prefix,'/init_bem.mat'],'file') && exist([root,'/bem_input',prefix,'/freq.mat'],'file')
@@ -29,7 +30,7 @@ end
 
 
 for mode = 1:length(freq)
-    system(['bash /data/vision/billf/object-properties/sound/ztzhang/renew/re_new.sh'])
+    % system(['bash /data/vision/billf/object-properties/sound/ztzhang/renew/re_new.sh'])
     mode
     name = sprintf('output-%d.dat',mode-1);
     fprintf([root,'/bem_result',prefix,'/',name])

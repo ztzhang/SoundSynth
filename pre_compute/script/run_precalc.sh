@@ -1,13 +1,14 @@
-ROOT=ABSPATH_TO_PROJECT_FOLDER
-LIBPATH=$ROOT/pre_compute/external/fmmlib3d-1.2/matlab
+ROOT= #Path to SoundSynth
+LIBPATH=$ROOT/pre_compute/external/fmmlib3d/matlab
 
-SOURCEPATH=${ROOT}/pre_compute/scripts
+SOURCEPATH=${ROOT}/pre_compute/script
 DATASET_NAME=final100
 
-python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 0
+# python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 2
 cd $SOURCEPATH
 CURPATH=${ROOT}/data/${DATASET_NAME}/$1/models/mat-$2
-FILEGENERATORS=${ROOT}/file_generators
+FILEGENERATORS=${ROOT}/file_generator
+# export LD_PRELOAD=/data/vision/billf/motion-analysis/software/gcc_6.3.0/lib64/libgomp.so.1
 matlab -nodisplay -nodesktop -nosplash -r "addpath('${FILEGENERATORS}');addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
 
 cd $CURPATH
