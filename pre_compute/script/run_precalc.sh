@@ -4,11 +4,11 @@ LIBPATH=$ROOT/pre_compute/external/fmmlib3d/matlab
 SOURCEPATH=${ROOT}/pre_compute/script
 DATASET_NAME=final100
 
-# python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 2
+python ${SOURCEPATH}/Pre_Calc_EV.py $1 $2 2
 cd $SOURCEPATH
 CURPATH=${ROOT}/data/${DATASET_NAME}/$1/models/mat-$2
 FILEGENERATORS=${ROOT}/file_generator
-# export LD_PRELOAD=/data/vision/billf/motion-analysis/software/gcc_6.3.0/lib64/libgomp.so.1
+# export LD_PRELOAD= point this to your libiomp5 if matlab is reporting stack related error when dynamic linking.
 matlab -nodisplay -nodesktop -nosplash -r "addpath('${FILEGENERATORS}');addpath('${SOURCEPATH}');addpath('${LIBPATH}'); FMMsolver('$CURPATH',0); quit"
 
 cd $CURPATH
